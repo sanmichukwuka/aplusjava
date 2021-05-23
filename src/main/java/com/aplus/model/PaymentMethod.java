@@ -28,6 +28,10 @@ public class PaymentMethod {
 	@ManyToOne(cascade=CascadeType.DETACH)
 	@JoinColumn(name="office_schedulers_id")
 	private OfficeScheduler officeScheduler;
+	
+	@ManyToOne(cascade=CascadeType.DETACH)
+	@JoinColumn(name="residential_schedulers_id")
+	private ResidentialScheduler residentialScheduler;
 
 	public String getExpiry() {
 		return expiry;
