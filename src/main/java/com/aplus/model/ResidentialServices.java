@@ -1,10 +1,16 @@
-/*package com.aplus.model;
+package com.aplus.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapsId;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name="residentialServices")
 public class ResidentialServices {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,20 +18,16 @@ public class ResidentialServices {
 	
 	private String name;
 	
-	private double price;
+	private double totalPrice;
 	
-	private ResidentCleanType type;
+	private ResidentialCleanType residents;
+    
+	@OneToOne
+	@MapsId
+	private ResidentialScheduler residentialScheduler;
 	
 	@Column(name = "residential_schedulers_id")
 	private Long residential_schedulers_id;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
@@ -35,20 +37,28 @@ public class ResidentialServices {
 		this.name = name;
 	}
 
-	public double getPrice() {
-		return price;
+	public double getTotalPrice() {
+		return totalPrice;
 	}
 
-	public void setPrice(double price) {
-		this.price = price;
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
 	}
 
-	public ResidentCleanType getType() {
-		return type;
+	public ResidentialCleanType getResidents() {
+		return residents;
 	}
 
-	public void setType(ResidentCleanType type) {
-		this.type = type;
+	public void setResidents(ResidentialCleanType residents) {
+		this.residents = residents;
+	}
+
+	public ResidentialScheduler getResidentialScheduler() {
+		return residentialScheduler;
+	}
+
+	public void setResidentialScheduler(ResidentialScheduler residentialScheduler) {
+		this.residentialScheduler = residentialScheduler;
 	}
 
 	public Long getResidential_schedulers_id() {
@@ -59,8 +69,9 @@ public class ResidentialServices {
 		this.residential_schedulers_id = residential_schedulers_id;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
 	
-	
-	
-	
-}*/
+}
