@@ -32,12 +32,6 @@ public class Address {
 	@MapsId
 	private OfficeScheduler appointments;
 	
-//	@JsonIgnore
-//	@OneToOne
-//	@MapsId
-//	private ResidentialScheduler rappointments;
-
-	
 
 	public Address(String street, String city, String state, String zip) {
 		super();
@@ -119,13 +113,6 @@ public class Address {
 		this.appointments = appointments;
 	}
 
-//	public ResidentialScheduler getRappointments() {
-//		return rappointments;
-//	}
-//
-//	public void setRappointments(ResidentialScheduler rappointments) {
-//		this.rappointments = rappointments;
-//	}
 	
 
 }
