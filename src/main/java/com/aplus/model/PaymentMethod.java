@@ -29,9 +29,9 @@ public class PaymentMethod {
 	@JoinColumn(name="office_schedulers_id")
 	private OfficeScheduler officeScheduler;
 	
-	@ManyToOne(cascade=CascadeType.DETACH)
-	@JoinColumn(name="residential_schedulers_id")
-	private ResidentialScheduler residentialScheduler;
+//	@ManyToOne(cascade=CascadeType.DETACH)
+//	@JoinColumn(name="residential_schedulers_id")
+//	private ResidentialScheduler residentialScheduler;
 
 	public String getExpiry() {
 		return expiry;

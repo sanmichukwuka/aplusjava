@@ -70,7 +70,7 @@ public class OfficeScheduler {
     @ManyToMany(cascade = CascadeType.DETACH )
 	@JoinTable(name = "office_scheduler_role", joinColumns = @JoinColumn(name = "office_scheduler_id"),
 	inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private Set<Role> roles =new HashSet <Role>();
+	private Set<Role> roles = new HashSet <Role>();
     
     @Column
 	@CreationTimestamp

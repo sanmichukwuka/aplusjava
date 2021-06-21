@@ -19,13 +19,13 @@ public class ResidentialServices {
 	private String name;
 	
 	private double totalPrice;
-	
-	private ResidentialCleanType residents;
-    
-	@OneToOne
-	@MapsId
-	private ResidentialScheduler residentialScheduler;
-	
+//	
+//	private ResidentialCleanType residents;
+//    
+//	@OneToOne
+//	@MapsId
+//	private ResidentialScheduler residentialScheduler;
+//	
 	@Column(name = "residential_schedulers_id")
 	private Long residential_schedulers_id;
 
@@ -45,21 +45,21 @@ public class ResidentialServices {
 		this.totalPrice = totalPrice;
 	}
 
-	public ResidentialCleanType getResidents() {
-		return residents;
-	}
-
-	public void setResidents(ResidentialCleanType residents) {
-		this.residents = residents;
-	}
-
-	public ResidentialScheduler getResidentialScheduler() {
-		return residentialScheduler;
-	}
-
-	public void setResidentialScheduler(ResidentialScheduler residentialScheduler) {
-		this.residentialScheduler = residentialScheduler;
-	}
+//	public ResidentialCleanType getResidents() {
+//		return residents;
+//	}
+//
+//	public void setResidents(ResidentialCleanType residents) {
+//		this.residents = residents;
+//	}
+//
+//	public ResidentialScheduler getResidentialScheduler() {
+//		return residentialScheduler;
+//	}
+//
+//	public void setResidentialScheduler(ResidentialScheduler residentialScheduler) {
+//		this.residentialScheduler = residentialScheduler;
+//	}
 
 	public Long getResidential_schedulers_id() {
 		return residential_schedulers_id;
